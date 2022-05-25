@@ -23,7 +23,7 @@ server.get('/dobro/:numero', (req, resp) => {
 
 // Função da Soma
 
-server.get('/somar', (req,resp) => {
+server.get('/somarGet', (req,resp) => {
     try {
         const a = Number(req.query.a);
         const b = Number(req.query.b);
@@ -42,7 +42,7 @@ server.get('/somar', (req,resp) => {
 
 // Função da Soma Post
 
-server.post('/somar', (req,resp) => {
+server.post('/somarPost', (req,resp) => {
     try{
         const {a,b} = req.body;
         const x = somar(a,b);
@@ -99,7 +99,7 @@ server.get('/tabuada', (req,resp) => {
     try{
         const numero = req.query.numero;
         const x = tabuada(numero);
-        resp.send({
+        resp.send({ 
             x:x
         })
     }

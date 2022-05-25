@@ -39,7 +39,7 @@ export function primaria (n){
     }
 }
 
-export function cinema (qtdinteiras, qtdmeias, diasemana, nacional, valor){
+export function cinema (qtdinteiras, qtdmeias, diasemana, nacional){
     if(nacional.toLowerCase() == 'brasileira'){
         return (qtdinteiras + qtdmeias) * 5;
     }
@@ -66,6 +66,6 @@ export function maiorNumero(numeros) {
     for (let item of numeros){
         if(item > maior)
             maior = item;
-    }
+    }       
     return maior;
 }
